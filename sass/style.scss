@@ -1,0 +1,129 @@
+$base-font-size: 17px;
+$content-width: 600px;
+
+#container {
+  margin: 60px auto 120px auto;
+}
+
+body {
+  background: #f0eee7;
+  font-family: sans-serif;
+  font-size: $base-font-size;
+  line-height: 1.4em;
+  color: #313131;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #313131;
+  border-top: 1px dotted transparent;
+  border-bottom: 1px dotted transparent;
+}
+
+header {
+  margin: 0 auto;
+  width: $content-width;
+  h1 {
+    font-family: "Hiragino Mincho Pro",serif;
+    font-size: 3em;
+    color: rgba(0,0,0,0.7);
+    line-height: 1em;
+    letter-spacing: 10px;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+}
+
+.info {
+  margin: 30px 10px 10px 10px;
+  text-align: center;
+  a {
+    line-height: 23px;
+    font-size: 18px;
+    font-family: "Hiragino Mincho Pro",serif;
+    display: inline-block;
+    position: relative;
+    color: rgba(0,0,0,0.6);
+    font-weight: bold;
+    &:first-child {
+      float: left;
+      text-align: left;
+    }
+    &:last-child {
+      float: right;
+      text-align: right;
+    }
+    span {
+      color: rgba(0,0,0,0.3);
+    }
+    &:hover {
+      color: #E64E42;
+/*
+      &:hover span {
+        color: desaturate(#E64E42, 35%);
+      }
+*/
+    }
+    small {
+      font-family: sans-serif;
+      font-weight: normal;
+      color: rgba(0,0,0,0.2);
+      display: block;
+      letter-spacing: normal;
+      font-size: 11px;
+      line-height: 16px;
+    }
+  }
+}
+
+article {
+  margin: 0 auto 0 auto;
+  width: $content-width;
+  ol {
+    counter-reset: li 0;
+    padding: 0;
+    margin: 0.5em 0;
+  }
+  li {
+    &::before {
+      content: counter(li) ".";
+      counter-increment: li;
+      top: 1em;
+      left: 1em;
+      text-align: right;
+      display: block;
+      width: 30px;
+      position: absolute;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+    background: rgba(255,255,255,0.55);
+    &:hover {
+      background: rgba(255,255,255,0.95);
+    }
+    position: relative;
+    padding: 1em 1em 1em 3.5em;
+    font-size: $base-font-size;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    color: #aeaeae;
+    display: block;
+    .story {
+      color: desaturate(#E64E42, 20%);
+      font-weight: bold;
+      max-width: 518px;
+      display: block;
+      white-space: nowrap;
+    	overflow: hidden;
+      text-overflow:ellipsis;
+      &:hover {
+        color: #E64E42;
+      }
+    }
+    .meta {
+      font-size:  0.75em;
+    }
+  }
+}

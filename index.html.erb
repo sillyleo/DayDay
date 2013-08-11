@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+    <title>日日報</title>
+    <meta content='' name='description' />
+    <meta content='' name='author' />
+    <meta content='width=device-width, initial-scale=1.0' name='viewport' />
+    <link href='stylesheets/style.css' rel='stylesheet' />
+  </head>
+  <body>
+    <div id='container'>
+      <header>
+    		<h1>
+    		  日日報
+        </h1>
+    		<nav class="info">
+          <a href="#">昨日<span>週三</span><small> 2013/7/24</small></a>
+          <a href="#">今日<span>週四</span><small> 2013/7/25</small></a>
+          <a href="#">明日<span>週五</span><small> 2013/7/26</small></a>
+    		</nav>
+      </header>
+      <article>
+        <ol>
+          <% 20.times do %>
+        	<li>
+          	<a href="#" class="story"><%= zh_lorem_sentence %></a>
+          	<div class="meta"><a href="#">3 則留言</a> • <%= lorem_date("%Y/%m/%d", 2013...2013) %> • 連結由<a href="#"><%= zh_lorem_name %></a>提供</div>
+        	</li>
+          <% end %>
+        </ol>
+      </article>
+    </div>
+  </body>
+</html>
